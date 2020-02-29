@@ -58,9 +58,6 @@ jobs:
     - name: passwall
       run: cd openwrt && echo "src-git lienol https://github.com/Lienol/openwrt-package" >> feeds.conf.default
       
-    - name: serverchan
-      run: cd openwrt && echo "src-git lienol https://github.com/tty228/luci-app-serverchan" >> feeds.conf.default
-
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
 
