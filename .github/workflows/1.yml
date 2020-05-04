@@ -58,6 +58,9 @@ jobs:
       
     - name: passwall
       run: cd openwrt && echo "src-git lienol https://github.com/Lienol/openwrt-package" >> feeds.conf.default
+ 
+    - name: ssr
+      run: cd openwrt && echo "src-git helloworld https://github.com/fw876/helloworld" >> feeds.conf.default
       
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
